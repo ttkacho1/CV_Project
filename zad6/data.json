@@ -1,0 +1,19 @@
+{
+  "umiejetnosci": [
+    "Tworzenie stron w technologiach HTML5, CSS3, JS",
+    "Programowanie gier w środowisku Unity (C#)",
+    "Zarządzanie projektami w systemie Git & GitHub",
+    "Podstawy technologii internetowych (ZTI)",
+    "Walidacja formularzy po stronie klienta"
+  ],
+  "projekty": [
+    {
+      "tytul": "2D Game Unity Project",
+      "opis": "Stworzenie gry 2D w środowisku Unity. Praca w zespole, odpowiedzialność za mechanikę i logikę poziomów."
+    },
+    {
+      "tytul": "Internetowy sklep odzieżowy",
+      "opis": "Projekt e-commerce wykonany zespołowo. Implementacja front-endu i koszyka zakupowego."
+    }
+  ]
+}
