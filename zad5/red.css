@@ -1,0 +1,41 @@
+body {
+    font-family: 'Georgia', serif !important; /* Шрифт із засічками */
+    background-color: #fff5f5;
+}
+
+header {
+    background-color: #dc3545 !important; /* Червоний Bootstrap */
+    color: white !important;
+}
+
+h2 {
+    color: #a52a2a !important;
+    border-left: 8px solid #dc3545; /* Лінія зліва */
+    padding-left: 15px;
+}
+
+.profile-img {
+    width: 170px;
+    height: 170px;
+    border-radius: 0 !important; /* КВАДРАТНЕ ФОТО */
+    border: 4px solid #fff;
+}
+
+.theme-btn {
+    display: inline-block;
+    padding: 8px 16px;
+    background-color: #dc3545;
+    color: white !important;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.experience-item, .edu-box {
+    border-bottom: 1px solid #ffcccc;
+    padding-bottom: 15px;
+}
+
+footer {
+    background-color: #8b0000;
+    color: white;
+}
