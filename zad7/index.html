@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV Timur Tkachov - Zadanie 4</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link id="theme-stylesheet" rel="stylesheet" href="red.css">
+</head>
+<body>
+
+    <header class="py-5 text-center">
+        <div class="container">
+            <h1>Timur Tkachov (Nr albumu: 66848)</h1>
+            <img src="cv_image.jpg" alt="Zdjęcie profilowe Timura Tkachova" class="profile-img shadow mt-3 mb-3">
+            <br>
+            <button id="theme-toggle-btn" class="btn btn-dark">Zmień motyw na Zielony</button>
+        </div>
+    </header>
+
+    <main class="container shadow bg-white my-5 p-4 rounded">
+        
+        <section id="kontakt">
+            <h2>Kontakt</h2>
+            <div class="row">
+                <div class="col-md-6">
+                    <p><strong>Email (uczelnia):</strong> <a href="mailto:ttkacho1@stu.vistula.edu.pl">ttkacho1@stu.vistula.edu.pl</a></p>
+                    <p><strong>Email (prywatny):</strong> <a href="mailto:timur.tkachov2005@gmail.com">timur.tkachov2005@gmail.com</a></p>
+                    <p><strong>Telefon:</strong> <a href="tel:+48886093880">+48 886 093 880</a></p>
+                    <p><strong>Miasto:</strong> Warszawa</p>
+                </div>
+                <div class="col-md-6">
+                    <p><strong>Linki:</strong></p>
+                    <a href="https://github.com/ttkacho1" class="theme-btn" target="_blank" rel="noopener noreferrer">GitHub</a>
+                    <a href="https://linkedin.com" class="theme-btn ms-2" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+                </div>
+            </div>
+        </section>
+
+
+        <section id="o-mnie">
+            <h2>O mnie</h2>
+            <p class="lead">
+                Student Informatyki na 6. semestrze w Akademii Vistula. 
+                Posiadam doświadczenie w pracy zespołowej oraz potrafię skutecznie łączyć naukę z aktywnością zawodową.
+            </p>
+        </section>
+
+        <section id="umiejetnosci">
+            <h2>Umiejętności</h2>
+            <ul id="skills-list"></ul>
+        </section>
+
+        <section id="doswiadczenie" class="position-relative">
+            <h2>
+                Doświadczenie
+                <button id="toggle-section-btn" class="btn btn-sm btn-outline-secondary float-end mt-1">Ukryj sekcję</button>
+            </h2>
+            <div id="doswiadczenie-content">
+                <article class="experience-item mt-3">
+                    <h3>Kucharz – CHINGU</h3>
+                    <p class="date">Październik 2025 – obecnie</p>
+                    <p>Przygotowywanie dań zgodnie ze standardami lokalu, zarządzanie stanowiskiem pracy.</p>
+                </article>
+
+                <article class="experience-item">
+                    <h3>Pracownik sklepu – Żabka</h3>
+                    <p class="date">Sierpień 2025 – Październik 2025</p>
+                    <p>Obsługa klienta, obsługa kasy fiskalnej, dbanie o ekspozycję towaru.</p>
+                </article>
+
+                <article class="experience-item">
+                    <h3>Kurier</h3>
+                    <p class="date">Marzec 2025 – Maj 2025</p>
+                    <p>Dostarczanie przesyłek w wyznaczonym terminie, optymalizacja tras przejazdu.</p>
+                </article>
+            </div>
+        </section>
+
+        <section id="edukacja">
+            <h2>Edukacja</h2>
+            <div class="edu-box">
+                <h5>Akademia Finansów i Biznesu Vistula (Warszawa)</h5>
+                <p>Kierunek: Informatyka (6. semestr)</p>
+            </div>
+            <div class="edu-box">
+                <h5>Charkowski Narodowy Uniwersytet Radioelektroniki (KHNURE)</h5>
+                <p>Specjalność: 122 (Informatyka) (2022 – 2023)</p>
+            </div>
+        </section>
+
+        <section id="projekty">
+            <h2>Projekty</h2>
+            <ol id="projects-list" class="list-group list-group-flush"></ol>
+        </section>
+        <section id="notatki" class="mt-5 border-top pt-4">
+            <h2>Moje Notatki (Local Storage)</h2>
+            <p class="text-muted small">Nowe Dane.</p>
+            
+            <div class="input-group mb-3">
+                <input type="text" id="nowa-notatka" class="form-control" placeholder="Wpisz nową notatkę lub zadanie...">
+                <button class="btn btn-primary theme-btn" id="dodaj-notatke-btn" type="button">Dodaj</button>
+            </div>
+            
+            <ul id="lista-notatek" class="list-group">
+                </ul>
+        </section>
+        <section id="napisz-do-mnie" class="mt-5 border-top pt-4">
+            <h2>Napisz do mnie</h2>
+            <!-- Атрибут novalidate вимикає стандартну перевірку браузера, щоб працював наш JS -->
+            <form id="contact-form" novalidate>
+                <div class="row">
+                    <div class="col-md-6 mb-3">
+                        <label for="imie" class="form-label">Imię</label>
+                        <input type="text" class="form-control" id="imie" placeholder="Wpisz imię">
+                        <div class="invalid-feedback" id="imie-error"></div>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <label for="nazwisko" class="form-label">Nazwisko</label>
+                        <input type="text" class="form-control" id="nazwisko" placeholder="Wpisz nazwisko">
+                        <div class="invalid-feedback" id="nazwisko-error"></div>
+                    </div>
+                </div>
+                
+                <div class="mb-3">
+                    <label for="email" class="form-label">E-mail</label>
+                    <input type="email" class="form-control" id="email" placeholder="np. jan.kowalski@example.com">
+                    <div class="invalid-feedback" id="email-error"></div>
+                </div>
+                
+                <div class="mb-3">
+                    <label for="wiadomosc" class="form-label">Wiadomość</label>
+                    <textarea class="form-control" id="wiadomosc" rows="4" placeholder="Twoja wiadomość..."></textarea>
+                    <div class="invalid-feedback" id="wiadomosc-error"></div>
+                </div>
+                
+                <button type="submit" class="theme-btn btn btn-primary">Wyślij wiadomość</button>
+                
+                <!-- Повідомлення про успіх (приховане за замовчуванням) -->
+                <div id="success-message" class="alert alert-success mt-3 d-none" role="alert">
+                    Formularz został wypełniony poprawnie! (Brak wysyłania na backend - Zadanie 5)
+                </div>
+            </form>
+        </section>
+
+    </main>
+
+    <footer class="text-center py-4">
+        <p>&copy; 2026 Timur Tkachov. Nr indeksu: 66848. Zadanie 5 – Formularz i walidacja.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
